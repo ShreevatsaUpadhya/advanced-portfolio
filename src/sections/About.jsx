@@ -12,7 +12,7 @@ export default function About() {
   const education = [
     {
       degree: "Master Of Computer Application",
-      institution: "Visvesvaraya Technological University (VTU)",
+      institution: "Bangalore Institute of Technology (VTU)",
       duration: "2020 – 2022",
       location: "Karnataka, India",
     },
