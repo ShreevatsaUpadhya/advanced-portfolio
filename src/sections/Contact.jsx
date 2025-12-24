@@ -67,7 +67,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="/resume/Shreevatsa-Upadhya-Resume.pdf"
+              href={`${process.env.PUBLIC_URL}/resume/Shreevatsa-Upadhya-Resume.pdf`}
               className="flex items-center justify-center gap-2
               px-6 py-3 border border-white/20 rounded-xl text-white
               hover:bg-white/10 transition transform hover:scale-105"

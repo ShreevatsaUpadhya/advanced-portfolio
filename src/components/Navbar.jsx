@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* ✅ LOGO (replaces name) */}
         <a href="#hero" className="flex items-center">
           <img
-            src="/Portfolio_logo.png"
+            src={`${process.env.PUBLIC_URL}/Portfolio_logo.png`}
             alt="SU Logo"
             className="h-9 w-auto object-contain transition hover:scale-105"
           />

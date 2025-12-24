@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="relative mx-auto w-40 h-40 mb-6">
           <div className="absolute inset-0 rounded-full bg-blue-500/30 blur-xl"></div>
           <img
-            src="/avatar.png" 
+            src={`${process.env.PUBLIC_URL}/avatar.png` }
             alt="Profile"
             className="relative z-10 rounded-full border-4 border-blue-500"
           />
@@ -66,7 +66,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex justify-center gap-4 mt-8">
           <a
-            href="/resume/Shreevatsa-Upadhya-Resume.pdf"
+            href={`${process.env.PUBLIC_URL}/resume/Shreevatsa-Upadhya-Resume.pdf`}
             className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white"
           >
             Download Resume
