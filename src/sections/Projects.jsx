@@ -1,10 +1,11 @@
+
 import { motion } from "framer-motion";
 import SectionWrapper from "../components/SectionWrapper";
 
 const projects = [
   {
     title: "Kotak Internal Tools",
-    desc: "Worked on cheque management, bug fixes, and unit testing for internal banking applications.",
+    desc: "Worked on cheque management,Credit card functionalities, account modules, bug fixes, and unit testing for internal banking applications.",
     points: [
       "Enhanced UI screens and fixed production bugs.",
       "Integrated APIs and handled transaction-related modules.",
@@ -12,7 +13,7 @@ const projects = [
     ],
     link: "#",
   },
-    {
+  {
     title: "Gokarna Pooja Information Website",
     desc: "A user-friendly informational website to explore pooja details, benefits, and contact information related to Gokarna.",
     points: [
@@ -32,7 +33,7 @@ const projects = [
       "Visualized data using charts for better insights.",
       "Built scalable components with clean state management.",
     ],
-    link: "#",
+    link: "https://github.com/ShreevatsaUpadhya/expense-tracker",
   },
   {
     title: "Personal Portfolio",
@@ -42,31 +43,35 @@ const projects = [
       "Reusable components and clean folder structure.",
       "Responsive design with modern gradient UI.",
     ],
-    link: "#",
+    link: "https://github.com/ShreevatsaUpadhya/advanced-portfolio",
   },
 ];
 
 export default function Projects() {
   return (
     <SectionWrapper id="projects">
-      <div className="text-center">
+      <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 
-        bg-gradient-to-r from-secondary to-accent text-transparent bg-clip-text">
-          Projects
+        {/* Heading – consistent with other sections */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-12">
+          My <span className="text-primary">Projects</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.05, y: -6 }}
-              className="p-6 rounded-2xl relative overflow-hidden text-left
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+              className="group p-6 rounded-2xl relative overflow-hidden text-left
               bg-black/30 backdrop-blur-xl border border-white/10 shadow-lg"
             >
-              {/* Glow overlay */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br 
-              from-primary/20 to-secondary/20 opacity-0 hover:opacity-100 transition"></div>
+              {/* Hover Glow (consistent pattern) */}
+              <div
+                className="absolute inset-0 rounded-2xl bg-gradient-to-br
+                from-primary/20 to-secondary/20 opacity-0
+                group-hover:opacity-100 transition duration-300"
+              ></div>
 
               <h3 className="text-2xl font-semibold text-white mb-2 relative z-10">
                 {p.title}
@@ -89,7 +94,7 @@ export default function Projects() {
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-accent font-semibold hover:underline relative z-10"
+                  className="inline-block text-primary font-semibold hover:underline relative z-10"
                 >
                   View Project →
                 </a>

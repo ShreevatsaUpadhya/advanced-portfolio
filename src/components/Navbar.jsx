@@ -13,27 +13,39 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-black/60 backdrop-blur-lg text-white z-50">
+    <nav className="fixed top-0 w-full h-16 bg-black/60 backdrop-blur-lg text-white z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+        {/* ✅ LOGO (replaces name) */}
+        <a href="#hero" className="flex items-center">
+          <img
+            src="/Portfolio_logo.png"
+            alt="SU Logo"
+            className="h-9 w-auto object-contain transition hover:scale-105"
+          />
+        </a>
 
-        {/* Logo */}
-        <h1 className="text-xl font-bold">Shreevatsa</h1>
-
-        {/* Desktop */}
+        {/* Desktop menu */}
         <ul className="hidden md:flex gap-8">
           {links.map((link) => (
             <li key={link.to}>
-              <a href={`#${link.to}`} className="hover:text-blue-400 transition">
+              <a
+                href={`#${link.to}`}
+                className="hover:text-blue-400 transition"
+              >
                 {link.name}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile menu icon */}
-        <div className="md:hidden" onClick={() => setOpen(!open)}>
-          <span className="text-2xl cursor-pointer">☰</span>
-        </div>
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden text-2xl focus:outline-none"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? "✕" : "☰"}
+        </button>
       </div>
 
       {/* Mobile menu */}
@@ -44,7 +56,7 @@ export default function Navbar() {
               <a
                 href={`#${link.to}`}
                 onClick={() => setOpen(false)}
-                className="block text-lg hover:text-blue-400"
+                className="block text-lg hover:text-blue-400 transition"
               >
                 {link.name}
               </a>

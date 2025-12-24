@@ -3,7 +3,7 @@ export const projects = [
   {
     title: "Kotak Banking Tools",
     description:
-      "Worked on cheque management, bug fixes, UI enhancement, Jest tests.",
+      "Worked on cheque management,Credit card functionalities, account modules, bug fixes, UI enhancement, Jest tests.",
     tech: ["React", "Java"],
     link: "#",
   },
